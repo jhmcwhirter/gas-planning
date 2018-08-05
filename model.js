@@ -132,9 +132,9 @@
       return this;
     },
     
-    importPurchases: function(){
+    importPurchases: function(sheetName){
       var doc = SpreadsheetApp.getActiveSpreadsheet();
-      var sheet = doc.getSheetByName("PoLines");
+      var sheet = doc.getSheetByName(sheetName);
       var pos = sheet.getRange(1,1,sheet.getLastRow(),sheet.getLastColumn()).getDisplayValues();
       
       var poLines = [];

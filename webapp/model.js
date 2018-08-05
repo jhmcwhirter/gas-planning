@@ -4,7 +4,7 @@ function doGet(e){
     model.generateProductionForecast([[16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16]],0,"week")
       .generateSalesForecast([[16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16]],0,"week")
       .importProducts(50)
-      .importPurchases()
+      .importPurchases("POLines")
       .generateCalendar()
     return ContentService.createTextOutput().setContent(JSON.stringify(model)).setMimeType(ContentService.MimeType.JSON);
   }
