@@ -1,6 +1,6 @@
 function doGet(e){
-  if(e.parameters["accessToken"][0] === PropertiesService.getScriptProperties().getProperty("accessToken")){
-    //console.log("Token: "+e.parameters["accessToken"]+"\nURL Token: "+PropertiesService.getScriptProperties().getProperty("accessToken"));
+  if(e.parameters["accessToken"][0] === scriptProperty("accessToken")){
+    //console.log("Token: "+e.parameters["accessToken"]+"\nURL Token: "+scriptProperty("accessToken"));
     model.generateProductionForecast([[16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16]],0,"week")
       .generateSalesForecast([[16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16]],0,"week")
       .importProducts(50)

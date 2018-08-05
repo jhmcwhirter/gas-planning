@@ -8,7 +8,6 @@
 *@customfunction
 *
 *@author John McWhirter <john@inventables.com>
-*@version 0.3 - Chinese New Year Adjustment added 12/6
 */
   function PLAN(rawForecast,product,outputType){
     

@@ -1,9 +1,9 @@
   var model = {
     date: new Date().toDateString().replace(/ /g,"-"),
     version: "0.1",
-    sourceDoc: PropertiesService.getScriptProperties().getProperty(modelSourceDoc), //gdocs doc ID
-    sourceSheet: PropertiesService.getScriptProperties().getProperty(modelSourceSheet), //gdocs sheet name
-    sourceRange: "",
+    sourceDoc: scriptProperty(modelSourceDoc), //gdocs doc ID
+    sourceSheet: scriptProperty(modelSourceSheet), //gdocs sheet name
+    sourceRange: "", //A1 notation
     productionForecastMeasurement: "", //string: "day", "week", or "month"
     salesForecastMeasurement: "",
     //forecastStartDate: "", //date string
